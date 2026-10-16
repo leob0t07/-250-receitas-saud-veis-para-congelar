@@ -1,0 +1,133 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import React, { useState, useEffect } from 'react';
+import { HeaderUrgency } from './components/HeaderUrgency';
+import { HeroSection } from './components/HeroSection';
+import { MiniQuiz } from './components/MiniQuiz';
+import { UniqueMechanism } from './components/UniqueMechanism';
+import { RecipeExplorer } from './components/RecipeExplorer';
+import { GastronomyGallery } from './components/GastronomyGallery';
+import { BonusStack } from './components/BonusStack';
+import { PricingTable } from './components/PricingTable';
+import { TestimonialsSection } from './components/TestimonialsSection';
+import { GuaranteeSection } from './components/GuaranteeSection';
+import { FaqSection } from './components/FaqSection';
+import { CheckoutModal } from './components/CheckoutModal';
+import { Zap, ChevronUp } from 'lucide-react';
+
+export default function App() {
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState<boolean>(false);
+  const [selectedPlan, setSelectedPlan] = useState<{ name: string; price: string }>({
+    name: 'Freezer Inteligente Premium (Mais Escolhido)',
+    price: 'R$ 29,90'
+  });
+  const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 600);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleOpenCheckout = (plan?: { name: string; price: string }) => {
+    if (plan) {
+      setSelectedPlan(plan);
+    }
+    setIsCheckoutOpen(true);
+  };
+
+  const scrollToPricing = () => {
+    scrollToSection('precos');
+  };
+
+  const scrollToQuiz = () => {
+    scrollToSection('quiz');
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col bg-neutral-50 text-slate-900 font-poppins selection:bg-emerald-500 selection:text-white pb-16 lg:pb-0">
+      {/* 1. Header with Urgency Banner & Clean Nav */}
+      <HeaderUrgency onCtaClick={scrollToPricing} />
+
+      <main className="flex-1">
+        {/* SEÇÃO 1: Hero Section (Primeira Dobra) */}
+        <HeroSection
+          onCtaClick={scrollToPricing}
+          onQuizClick={scrollToQuiz}
+        />
+
+        {/* SEÇÃO 2: Mini Quiz Biométrico & Diagnóstico Opcional */}
+        <MiniQuiz onCtaClick={scrollToPricing} />
+
+        {/* SEÇÃO 3: Mecanismo Único & Quebra de Objeções */}
+        <UniqueMechanism />
+
+        {/* SEÇÃO 4: O Acervo (+250 Receitas em 6 Capítulos) */}
+        <RecipeExplorer onCtaClick={scrollToPricing} />
+
+        {/* SEÇÃO 5: Galeria Visual & Apelo Gastronômico */}
+        <GastronomyGallery />
+
+        {/* SEÇÃO 6: Os 3 Bônus Exclusivos (Stack de Valor) */}
+        <BonusStack onCtaClick={scrollToPricing} />
+
+        {/* SEÇÃO 7: Tabela Comparativa de Edições & Ancoragem Agressiva (Inspirada no NewDetox) */}
+        <PricingTable onSelectPlan={handleOpenCheckout} />
+
+        {/* SEÇÃO 8: Prova Social & Depoimentos Realistas (Estilo Redes Sociais) */}
+        <TestimonialsSection onCtaClick={scrollToPricing} />
+
+        {/* SEÇÃO 9: Garantia Blindada de 30 Dias */}
+        <GuaranteeSection onCtaClick={scrollToPricing} />
+
+        {/* SEÇÃO 10: FAQ (Perguntas Frequentes) & Rodapé de Fechamento */}
+        <FaqSection onCtaClick={scrollToPricing} />
+      </main>
+
+      {/* Mobile Sticky Action Bar (Strictly <= 15% viewport height rule with Poppins/Montserrat) */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 px-3.5 shadow-2xl flex items-center justify-between gap-3">
+        <div className="flex flex-col">
+          <span className="text-[10px] uppercase font-montserrat font-bold text-slate-500 leading-tight">De R$ 147 por</span>
+          <span className="text-base font-montserrat font-black text-emerald-800 leading-none">R$ 19,90</span>
+        </div>
+        <button
+          onClick={scrollToPricing}
+          className="btn-cta-gold font-montserrat font-black text-xs uppercase tracking-wider py-2.5 px-4 rounded-xl text-neutral-950 flex items-center gap-1.5 shadow-md cursor-pointer shrink-0 min-h-[42px]"
+        >
+          <Zap className="w-3.5 h-3.5 fill-neutral-950 text-neutral-950 shrink-0" />
+          <span>Quero Experimentar!</span>
+        </button>
+      </div>
+
+      {/* Scroll to Top Floating Button */}
+      {showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          aria-label="Voltar ao topo"
+          className="fixed bottom-20 lg:bottom-6 right-4 sm:right-5 z-30 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center shadow-lg cursor-pointer transition-all hover:scale-110"
+        >
+          <ChevronUp className="w-5 h-5" />
+        </button>
+      )}
+
+      {/* Checkout Drawer / Modal */}
+      <CheckoutModal
+        isOpen={isCheckoutOpen}
+        onClose={() => setIsCheckoutOpen(false)}
+        selectedPlan={selectedPlan}
+      />
+    </div>
+  );
+}
