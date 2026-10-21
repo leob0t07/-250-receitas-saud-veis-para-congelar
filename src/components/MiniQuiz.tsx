@@ -98,7 +98,7 @@ export const MiniQuiz: React.FC<MiniQuizProps> = ({ onCtaClick }) => {
             Diagnóstico Gratuito Opcional
           </span>
           <h2 className="font-montserrat text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 leading-tight uppercase">
-            Mini Quiz Biométrico: Descubra Sua Meta Calórica e Cardápio Ideal
+            Faça o seu cardápio ideal, menos de 1 min
           </h2>
           <p className="mt-2.5 sm:mt-3 text-xs sm:text-base text-slate-600 font-medium">
             Responda 3 perguntas rápidas para calcular sua necessidade diária de calorias e ver as receitas ideais do acervo de +250 para você.
@@ -429,7 +429,7 @@ export const MiniQuiz: React.FC<MiniQuizProps> = ({ onCtaClick }) => {
                         if (typeof window !== 'undefined' && (window as any).fbq) {
                           (window as any).fbq('track', 'InitiateCheckout', {
                             content_name: 'Freezer Inteligente Premium (Quiz)',
-                            value: 29.90,
+                            value: 19.90,
                             currency: 'BRL',
                           });
                         }
@@ -437,7 +437,7 @@ export const MiniQuiz: React.FC<MiniQuizProps> = ({ onCtaClick }) => {
                       className="btn-cta-gold w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-montserrat font-black text-xs sm:text-base text-neutral-950 uppercase tracking-wider cursor-pointer shadow-lg inline-flex items-center justify-center gap-2 min-h-[50px] no-underline text-center"
                     >
                       <Sparkles className="w-4 h-4 text-neutral-950 shrink-0" />
-                      <span>Levar Edição Completa Recomendada (R$ 29,90)</span>
+                      <span>Levar Edição Completa Recomendada (R$ 19,90)</span>
                       <ChevronRight className="w-4 h-4 text-neutral-950 shrink-0" />
                     </a>
 
@@ -449,14 +449,14 @@ export const MiniQuiz: React.FC<MiniQuizProps> = ({ onCtaClick }) => {
                         if (typeof window !== 'undefined' && (window as any).fbq) {
                           (window as any).fbq('track', 'InitiateCheckout', {
                             content_name: 'Kit Freezer Essencial (Quiz)',
-                            value: 19.90,
+                            value: 9.90,
                             currency: 'BRL',
                           });
                         }
                       }}
                       className="w-full sm:w-auto px-5 py-3.5 rounded-xl font-montserrat font-black text-xs sm:text-sm text-emerald-950 bg-emerald-100 hover:bg-emerald-200 border border-emerald-300 uppercase tracking-wider cursor-pointer inline-flex items-center justify-center gap-1.5 min-h-[50px] no-underline text-center transition-colors"
                     >
-                      <span>Ou Edição Básica (R$ 19,90)</span>
+                      <span>Ou Edição Básica (R$ 9,90)</span>
                     </a>
                   </div>
 

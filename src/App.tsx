@@ -15,15 +15,9 @@ import { PricingTable } from './components/PricingTable';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { GuaranteeSection } from './components/GuaranteeSection';
 import { FaqSection } from './components/FaqSection';
-import { CheckoutModal } from './components/CheckoutModal';
 import { Zap, ChevronUp } from 'lucide-react';
 
 export default function App() {
-  const [isCheckoutOpen, setIsCheckoutOpen] = useState<boolean>(false);
-  const [selectedPlan, setSelectedPlan] = useState<{ name: string; price: string }>({
-    name: 'Freezer Inteligente Premium (Mais Escolhido)',
-    price: 'R$ 29,90'
-  });
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
 
   useEffect(() => {
@@ -39,13 +33,6 @@ export default function App() {
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
-  };
-
-  const handleOpenCheckout = (plan?: { name: string; price: string }) => {
-    if (plan) {
-      setSelectedPlan(plan);
-    }
-    setIsCheckoutOpen(true);
   };
 
   const scrollToPricing = () => {
@@ -84,7 +71,7 @@ export default function App() {
         <BonusStack onCtaClick={scrollToPricing} />
 
         {/* SEÇÃO 7: Tabela Comparativa de Edições & Ancoragem Agressiva (Inspirada no NewDetox) */}
-        <PricingTable onSelectPlan={handleOpenCheckout} />
+        <PricingTable />
 
         {/* SEÇÃO 8: Prova Social & Depoimentos Realistas (Estilo Redes Sociais) */}
         <TestimonialsSection onCtaClick={scrollToPricing} />
@@ -99,8 +86,8 @@ export default function App() {
       {/* Mobile Sticky Action Bar (Strictly <= 15% viewport height rule with Poppins/Montserrat) */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 px-3.5 shadow-2xl flex items-center justify-between gap-3">
         <div className="flex flex-col">
-          <span className="text-[10px] uppercase font-montserrat font-bold text-slate-500 leading-tight">De R$ 147 por</span>
-          <span className="text-base font-montserrat font-black text-emerald-800 leading-none">R$ 19,90</span>
+          <span className="text-[10px] uppercase font-montserrat font-bold text-slate-500 leading-tight">A partir de</span>
+          <span className="text-base font-montserrat font-black text-emerald-800 leading-none">R$ 9,90</span>
         </div>
         <button
           onClick={scrollToPricing}
@@ -121,13 +108,6 @@ export default function App() {
           <ChevronUp className="w-5 h-5" />
         </button>
       )}
-
-      {/* Checkout Drawer / Modal */}
-      <CheckoutModal
-        isOpen={isCheckoutOpen}
-        onClose={() => setIsCheckoutOpen(false)}
-        selectedPlan={selectedPlan}
-      />
     </div>
   );
 }

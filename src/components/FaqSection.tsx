@@ -77,7 +77,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onCtaClick }) => {
                 className="btn-cta-gold w-full sm:w-auto font-montserrat font-black text-sm sm:text-lg text-neutral-950 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl uppercase tracking-wider inline-flex items-center justify-center gap-2 cursor-pointer shadow-lg min-h-[50px]"
               >
                 <Zap className="w-4 h-4 sm:w-5 sm:h-5 fill-neutral-950 text-neutral-950 shrink-0" />
-                <span>Sim! Quero Começar Por R$ 19,90</span>
+                <span>Sim! Quero Começar a Partir de R$ 9,90</span>
               </button>
             </div>
           </div>

@@ -1,11 +1,7 @@
 import React from 'react';
 import { ShieldCheck, Check, Star, Sparkles, Zap, Lock, ArrowRight } from 'lucide-react';
 
-interface PricingTableProps {
-  onSelectPlan?: (plan: { name: string; price: string; link?: string }) => void;
-}
-
-export const PricingTable: React.FC<PricingTableProps> = ({ onSelectPlan }) => {
+export const PricingTable: React.FC = () => {
   const trackInitiateCheckout = (planName: string, value: number) => {
     if (typeof window !== 'undefined' && (window as any).fbq) {
       (window as any).fbq('track', 'InitiateCheckout', {
@@ -34,7 +30,7 @@ export const PricingTable: React.FC<PricingTableProps> = ({ onSelectPlan }) => {
 
         {/* 2 Pricing Cards Grid (Edição Essencial vs Freezer Inteligente Premium) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch max-w-3xl mx-auto mb-10 sm:mb-12">
-          {/* Plan 1: Essencial (19,90) */}
+          {/* Plan 1: Essencial (9,90) */}
           <div className="bg-emerald-700 text-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border border-emerald-600 flex flex-col justify-between relative order-2 md:order-1">
             <div>
               <div className="text-center border-b border-emerald-600/60 pb-5 mb-5">
@@ -52,16 +48,16 @@ export const PricingTable: React.FC<PricingTableProps> = ({ onSelectPlan }) => {
               {/* Pricing Display */}
               <div className="text-center mb-6 py-2">
                 <span className="text-xs font-montserrat text-emerald-200/80 line-through block">
-                  De R$ 97,00 por apenas
+                  De R$ 47,00 por apenas
                 </span>
                 <div className="flex items-center justify-center gap-1 font-montserrat font-black leading-none my-1.5">
-                  <span className="text-xs sm:text-sm text-emerald-200">2x</span>
+                  <span className="text-xs sm:text-sm text-emerald-200">Apenas</span>
                   <span className="text-3xl sm:text-5xl text-white font-black tracking-tight tabular-nums">
-                    R$ 10,40
+                    R$ 9,90
                   </span>
                 </div>
                 <span className="text-[11px] sm:text-xs font-montserrat font-bold text-emerald-100 uppercase tracking-wide">
-                  Ou R$ 19,90 à vista no PIX
+                  Pagamento único no PIX ou Cartão
                 </span>
               </div>
 
@@ -97,8 +93,7 @@ export const PricingTable: React.FC<PricingTableProps> = ({ onSelectPlan }) => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => {
-                trackInitiateCheckout('Kit Freezer Essencial', 19.90);
-                onSelectPlan?.({ name: 'Kit Freezer Essencial', price: 'R$ 19,90', link: 'https://pay.cakto.com.br/xtrakpo_953780' });
+                trackInitiateCheckout('Kit Freezer Essencial', 9.90);
               }}
               className="w-full bg-white hover:bg-emerald-50 text-emerald-900 font-montserrat font-black text-xs sm:text-sm uppercase tracking-wider py-4 rounded-xl sm:rounded-2xl cursor-pointer shadow-lg transition-transform hover:scale-102 flex items-center justify-center gap-2 min-h-[50px] text-center no-underline"
             >
@@ -107,7 +102,7 @@ export const PricingTable: React.FC<PricingTableProps> = ({ onSelectPlan }) => {
             </a>
           </div>
 
-          {/* Plan 2: PREMIUM MAIS ESCOLHIDO (29,90) - HIGHLIGHTED */}
+          {/* Plan 2: PREMIUM MAIS ESCOLHIDO (19,90) - HIGHLIGHTED */}
           <div className="bg-emerald-600 text-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl border-4 border-amber-400 flex flex-col justify-between relative order-1 md:order-2 scale-100 md:scale-103 z-10 card-pricing-highlight">
             {/* Top Ribbon */}
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-400 to-amber-500 text-neutral-950 font-montserrat font-black text-[10px] sm:text-xs uppercase tracking-wider py-1 px-4 sm:px-6 rounded-full shadow-lg flex items-center gap-1 whitespace-nowrap">
@@ -132,16 +127,16 @@ export const PricingTable: React.FC<PricingTableProps> = ({ onSelectPlan }) => {
               {/* Pricing Display */}
               <div className="text-center mb-6 py-2.5 bg-emerald-700/60 rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-emerald-400/40">
                 <span className="text-xs font-montserrat text-amber-200 line-through block font-bold">
-                  De R$ 247,00 por apenas
+                  De R$ 197,00 por apenas
                 </span>
                 <div className="flex items-center justify-center gap-1 font-montserrat font-black leading-none my-1">
-                  <span className="text-xs sm:text-base text-amber-300">3x</span>
+                  <span className="text-xs sm:text-base text-amber-300">2x</span>
                   <span className="text-3xl sm:text-5xl lg:text-6xl text-white font-black tracking-tight tabular-nums">
-                    R$ 10,50
+                    R$ 10,40
                   </span>
                 </div>
                 <span className="text-[11px] sm:text-xs font-montserrat font-black text-amber-300 uppercase tracking-wide block">
-                  Ou apenas R$ 29,90 à vista no PIX
+                  Ou apenas R$ 19,90 à vista no PIX
                 </span>
               </div>
 
@@ -183,8 +178,7 @@ export const PricingTable: React.FC<PricingTableProps> = ({ onSelectPlan }) => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => {
-                trackInitiateCheckout('Freezer Inteligente Premium', 29.90);
-                onSelectPlan?.({ name: 'Freezer Inteligente Premium', price: 'R$ 29,90', link: 'https://pay.cakto.com.br/ttadqb9' });
+                trackInitiateCheckout('Freezer Inteligente Premium', 19.90);
               }}
               className="btn-cta-gold w-full text-neutral-950 font-montserrat font-black text-sm sm:text-base uppercase tracking-wider py-4 rounded-xl sm:rounded-2xl cursor-pointer shadow-xl flex items-center justify-center gap-2 min-h-[52px] text-center no-underline"
             >

@@ -16,14 +16,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick, onQuizClic
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Top Badges & Announcement */}
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-5 sm:mb-8">
+          {/* Eyebrow pequeno em cima */}
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-montserrat font-extrabold tracking-wide uppercase mb-3 sm:mb-4 border border-emerald-200/80 shadow-2xs">
+            +250 receitas deliciosas
+          </span>
+
           {/* Main Headline */}
           <h1 className="font-montserrat text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.18] sm:leading-[1.12] tracking-tight uppercase text-center text-balance">
-            Cozinhe Apenas <span className="text-emerald-600 underline decoration-amber-400 decoration-wavy decoration-2">1 Vez Na Semana</span> E Tenha Refeições Deliciosas, Saudáveis E Prontas No Seu Freezer!
+            Alimentação da semana <span className="text-emerald-600 underline decoration-amber-400 decoration-wavy decoration-2">cozinhando só em um dia</span>
           </h1>
 
           {/* Sub-headline */}
           <p className="mt-3.5 sm:mt-5 text-sm sm:text-lg md:text-xl text-slate-700 leading-relaxed max-w-3xl font-medium font-poppins text-center text-balance">
-            Esqueça a comida congelada <strong className="text-rose-600 font-bold">seca, empapada ou sem gosto</strong>. Descubra o método prático de 2 horas para destravar <strong className="text-emerald-700 font-bold">+250 receitas nutritivas</strong> com sabor e textura de comida feita na hora — com calorias e macros calculados para secar gordura ou ganhar massa sem abrir mão do sabor.
+            Comida de verdade para o seu objetivo feita somente uma vez na semana para quando você precisar. Passo a passo completo com lista de compras, receitas e organização.
           </p>
         </div>
 
@@ -112,7 +117,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick, onQuizClic
                 onClick={onQuizClick}
                 className="inline-flex items-center justify-center gap-1.5 text-emerald-800 bg-emerald-100 hover:bg-emerald-200 border border-emerald-300 font-montserrat font-bold text-xs sm:text-sm px-4 py-2.5 rounded-full transition-colors cursor-pointer"
               >
-                <span>Descubra seu perfil no Mini Quiz Biométrico</span>
+                <span>Faça o seu cardápio ideal, menos de 1 min</span>
                 <ArrowDown className="w-3.5 h-3.5 text-emerald-700 animate-bounce shrink-0" />
               </button>
             </div>
