@@ -26,7 +26,7 @@ export const GastronomyGallery: React.FC = () => {
                 <picture>
                   <source srcSet="/images/meal_prep_containers.webp" type="image/webp" />
                   <img
-                    src="/images/meal_prep_containers.jpg"
+                    src="/images/meal_prep_containers.webp"
                     alt="Marmitas saudáveis organizadas em potes herméticos com legumes frescos e frango marinado"
                     width={800}
                     height={500}
@@ -37,7 +37,7 @@ export const GastronomyGallery: React.FC = () => {
                   />
                 </picture>
                 <span className="absolute bottom-2.5 left-2.5 bg-slate-900/85 backdrop-blur-xs text-white text-[11px] font-montserrat font-bold py-1 px-2.5 rounded-md">
-                  Organização Semanal em 2 Horas
+                  Organização Semanal em 1h30
                 </span>
               </div>
 
@@ -68,7 +68,7 @@ export const GastronomyGallery: React.FC = () => {
                 <picture>
                   <source srcSet="/images/gourmet_dish_healthy.webp" type="image/webp" />
                   <img
-                    src="/images/gourmet_dish_healthy.jpg"
+                    src="/images/gourmet_dish_healthy.webp"
                     alt="Prato gourmet de peito de frango suculento grelhado com aspargos e pesto fresco recém-aquecido"
                     width={800}
                     height={500}

@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 import { HeaderUrgency } from './components/HeaderUrgency';
 import { HeroSection } from './components/HeroSection';
 import { MiniQuiz } from './components/MiniQuiz';
+import { RoutineComparison } from './components/RoutineComparison';
 import { UniqueMechanism } from './components/UniqueMechanism';
 import { RecipeExplorer } from './components/RecipeExplorer';
 import { GastronomyGallery } from './components/GastronomyGallery';
@@ -58,7 +59,10 @@ export default function App() {
         {/* SEÇÃO 2: Mini Quiz Biométrico & Diagnóstico Opcional */}
         <MiniQuiz onCtaClick={scrollToPricing} />
 
-        {/* SEÇÃO 3: Mecanismo Único & Quebra de Objeções */}
+        {/* SEÇÃO 3: Comparativo Real de Rotina */}
+        <RoutineComparison />
+
+        {/* SEÇÃO 4: Mecanismo Único & Quebra de Objeções */}
         <UniqueMechanism />
 
         {/* SEÇÃO 4: O Acervo (+250 Receitas em 6 Capítulos) */}

@@ -1,6 +1,6 @@
 {
   "name": "+250 Receitas Saudáveis para Congelar",
-  "description": "Cozinhe apenas 1 vez na semana em 2 horas e tenha refeições nutritivas, saborosas e prontas para o freezer com textura de comida fresca.",
+  "description": "Cozinhe apenas 1 vez na semana em 1h30 e tenha refeições nutritivas, saborosas e prontas para o freezer com textura de comida fresca.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

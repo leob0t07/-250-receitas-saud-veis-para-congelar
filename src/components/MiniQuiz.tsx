@@ -255,7 +255,7 @@ export const MiniQuiz: React.FC<MiniQuizProps> = ({ onCtaClick }) => {
                   {[
                     { id: 'emagrecer', title: 'Emagrecer & Queimar Gordura', desc: 'Refeições volumosas de baixas calorias para manter saciedade prolongada sem passar fome.' },
                     { id: 'hipertrofia', title: 'Ganho de Massa Muscular', desc: 'Refeições hiperproteicas (35g a 45g de proteína) para acelerar a síntese muscular.' },
-                    { id: 'tempo', title: 'Economizar Tempo & Marmita Prática', desc: 'Cozinhar tudo no domingo em 2h e nunca mais esquentar a cabeça com almoço na semana.' },
+                    { id: 'tempo', title: 'Economizar Tempo & Marmita Prática', desc: 'Cozinhar tudo no domingo em 1h30 e nunca mais esquentar a cabeça com almoço na semana.' },
                     { id: 'familia', title: 'Alimentar a Família com Saúde', desc: 'Receitas saborosas e nutritivas que crianças e adultos adoram, reduzindo delivery.' }
                   ].map((item) => (
                     <button

@@ -28,7 +28,7 @@ export const BonusStack: React.FC<BonusStackProps> = ({ onCtaClick }) => {
           <picture>
             <source srcSet="/images/bonus_bundle_ptbr.webp" type="image/webp" />
             <img
-              src="/images/bonus_bundle_ptbr.jpg"
+              src="/images/bonus_bundle_ptbr.webp"
               alt="Coleção de Bônus Exclusivos em Português: Plano Marmitas Inteligentes, Lista de Compras e Guia de Organização do Freezer"
               width={1000}
               height={700}

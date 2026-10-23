@@ -28,7 +28,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick, onQuizClic
 
           {/* Sub-headline */}
           <p className="mt-3.5 sm:mt-5 text-sm sm:text-lg md:text-xl text-slate-700 leading-relaxed max-w-3xl font-medium font-poppins text-center text-balance">
-            Comida de verdade para o seu objetivo feita somente uma vez na semana para quando você precisar. Passo a passo completo com lista de compras, receitas e organização.
+            Prepare marmitas saborosas e lanches práticos em apenas 1h30 no domingo — com comida de verdade, ingredientes baratos e usando potes comuns.
           </p>
         </div>
 
@@ -40,7 +40,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick, onQuizClic
               <picture>
                 <source srcSet="/images/hero_ebook_mockup.webp" type="image/webp" />
                 <img
-                  src="/images/hero_ebook_mockup.jpg"
+                  src="/images/hero_ebook_mockup.webp"
                   alt="Acervo +250 Receitas Saudáveis para Congelar Mockup Digital e Marmitas Prontas"
                   width={1200}
                   height={900}
@@ -64,7 +64,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick, onQuizClic
             {/* Quick Feature Cards Grid on Mobile (Perfect Centering) */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mt-3 sm:mt-4 text-center">
               <div className="bg-white p-2.5 sm:p-3 rounded-xl border border-emerald-100 shadow-2xs flex flex-col items-center justify-center text-center">
-                <span className="block text-emerald-700 font-montserrat font-black text-base sm:text-xl leading-tight">2 Horas</span>
+                <span className="block text-emerald-700 font-montserrat font-black text-base sm:text-xl leading-tight">1h30</span>
                 <span className="text-[10px] sm:text-xs text-slate-600 font-semibold leading-tight font-poppins mt-0.5">Cozinha 1x no Domingo</span>
               </div>
               <div className="bg-white p-2.5 sm:p-3 rounded-xl border border-emerald-100 shadow-2xs flex flex-col items-center justify-center text-center">
