@@ -41,7 +41,7 @@ export const PricingTable: React.FC = () => {
                   Kit Freezer Essencial
                 </h3>
                 <p className="text-xs text-emerald-100/80 mt-1 font-medium">
-                  Ideal para quem quer apenas as receitas principais
+                  Ideal para quem quer apenas as 50 receitas principais
                 </p>
               </div>
 
@@ -65,7 +65,7 @@ export const PricingTable: React.FC = () => {
               <ul className="space-y-2.5 text-xs sm:text-sm text-emerald-50 mb-8 border-t border-emerald-600/60 pt-5">
                 <li className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-emerald-300 shrink-0" />
-                  <span><strong>E-book Oficial:</strong> +250 Receitas Congeláveis</span>
+                  <span><strong>E-book Oficial:</strong> 50 Receitas Congeláveis</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-emerald-300 shrink-0" />
@@ -180,10 +180,10 @@ export const PricingTable: React.FC = () => {
               onClick={() => {
                 trackInitiateCheckout('Freezer Inteligente Premium', 19.90);
               }}
-              className="btn-cta-gold w-full text-neutral-950 font-montserrat font-black text-sm sm:text-base uppercase tracking-wider py-4 rounded-xl sm:rounded-2xl cursor-pointer shadow-xl flex items-center justify-center gap-2 min-h-[52px] text-center no-underline"
+              className="btn-cta-gold w-full text-neutral-950 font-montserrat font-black text-xs sm:text-sm md:text-base uppercase tracking-wide sm:tracking-wider py-3.5 sm:py-4 px-3 sm:px-6 rounded-xl sm:rounded-2xl cursor-pointer shadow-xl flex items-center justify-center gap-1.5 sm:gap-2 min-h-[48px] sm:min-h-[52px] text-center no-underline transition-transform hover:scale-102"
             >
               <Zap className="w-4 h-4 sm:w-5 sm:h-5 fill-neutral-950 text-neutral-950 shrink-0" />
-              <span>Comprar Agora · Melhor Oferta</span>
+              <span className="leading-tight">Comprar Agora · Melhor Oferta</span>
             </a>
           </div>
         </div>
