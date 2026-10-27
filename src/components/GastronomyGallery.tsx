@@ -45,7 +45,7 @@ export const GastronomyGallery: React.FC = () => {
                 A Sensação de Abrir o Freezer e Ver Sua Semana Toda Pronta
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium mb-4">
-                Imagine voltar cansado(a) da rua em uma quarta-feira e não precisar picar alho, nem ligar o fogão, nem gastar R$ 60 num lanche gorduroso. Você pega uma marmita, coloca 4 minutos no micro-ondas e tem um jantar de bistrô pronto na sua frente.
+                Imagine voltar cansado(a) da rua em uma quarta-feira e não precisar picar alho, nem ligar o fogão, nem gastar R$ 60 num lanche gorduroso. Você pega uma marmita, coloca 4 minutos no micro-ondas e tem um jantar caseiro delicioso e quentinho pronto na sua frente.
               </p>
             </div>
 
@@ -69,7 +69,7 @@ export const GastronomyGallery: React.FC = () => {
                   <source srcSet="/images/gourmet_dish_healthy.webp" type="image/webp" />
                   <img
                     src="/images/gourmet_dish_healthy.webp"
-                    alt="Prato gourmet de peito de frango suculento grelhado com aspargos e pesto fresco recém-aquecido"
+                    alt="Prato saboroso de peito de frango suculento grelhado com legumes frescos recém-aquecido"
                     width={800}
                     height={500}
                     className="w-full h-56 sm:h-72 object-cover hover:scale-105 transition-transform duration-500"
@@ -87,7 +87,7 @@ export const GastronomyGallery: React.FC = () => {
                 Ninguém Vai Acreditar Que Essa Comida Saiu do Freezer
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium mb-4">
-                O vapor aromático que sobe do prato, a fibra macia da proteína e o crocante dos aspargos e da batata rústica. Com o ponto de cozimento ajustado que ensinamos, a comida nunca resseca nem fica aguada.
+                O vapor aromático que sobe do prato, a fibra macia do frango desfiado e o crocante dos legumes e da batata rústica. Com o ponto de cozimento ajustado que ensinamos, a comida nunca resseca nem fica aguada.
               </p>
             </div>
 

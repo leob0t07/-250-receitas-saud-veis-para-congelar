@@ -59,22 +59,22 @@ export default function App() {
         {/* SEÇÃO 2: Mini Quiz Biométrico & Diagnóstico Opcional */}
         <MiniQuiz onCtaClick={scrollToPricing} />
 
-        {/* SEÇÃO 3: Comparativo Real de Rotina */}
+        {/* Comparativo Real de Rotina (Posicionado logo após o Mini Quiz conforme solicitado) */}
         <RoutineComparison />
 
-        {/* SEÇÃO 4: Mecanismo Único & Quebra de Objeções */}
-        <UniqueMechanism />
-
-        {/* SEÇÃO 4: O Acervo (+250 Receitas em 6 Capítulos) */}
+        {/* SEÇÃO 3: O Acervo (+250 Receitas em 6 Capítulos) & SEÇÃO 4: Amostras de Receitas */}
         <RecipeExplorer onCtaClick={scrollToPricing} />
 
-        {/* SEÇÃO 5: Galeria Visual & Apelo Gastronômico */}
+        {/* Galeria Visual & Apelo Prático */}
         <GastronomyGallery />
+
+        {/* SEÇÃO 5: Módulo "Alimentação para a Semana em 1h30" (Como Funciona o Método Por Dentro) */}
+        <UniqueMechanism />
 
         {/* SEÇÃO 6: Os 3 Bônus Exclusivos (Stack de Valor) */}
         <BonusStack onCtaClick={scrollToPricing} />
 
-        {/* SEÇÃO 7: Tabela Comparativa de Edições & Ancoragem Agressiva (Inspirada no NewDetox) */}
+        {/* SEÇÃO 7: Tabela de Checkout & Ofertas */}
         <PricingTable />
 
         {/* SEÇÃO 8: Prova Social & Depoimentos Realistas (Estilo Redes Sociais) */}
@@ -98,7 +98,7 @@ export default function App() {
           className="btn-cta-gold font-montserrat font-black text-xs uppercase tracking-wider py-2.5 px-4 rounded-xl text-neutral-950 flex items-center gap-1.5 shadow-md cursor-pointer shrink-0 min-h-[42px]"
         >
           <Zap className="w-3.5 h-3.5 fill-neutral-950 text-neutral-950 shrink-0" />
-          <span>Quero Experimentar!</span>
+          <span>Quero Meu Acervo!</span>
         </button>
       </div>
 

@@ -34,7 +34,7 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ onCtaClick }
             </div>
 
             <h3 className="font-montserrat text-xl sm:text-3xl font-black text-slate-900 leading-tight uppercase">
-              Teste as Receitas por 30 Dias: Se Não Amar o Sabor, Devolvemos 100% do Seu Dinheiro
+              Teste o Acervo Por 30 Dias: Se Não Amar o Sabor, Devolvemos 100% do Seu Dinheiro
             </h3>
 
             <p className="mt-3 text-xs sm:text-base text-slate-600 leading-relaxed font-medium">

@@ -28,7 +28,7 @@ export const CHAPTER_SUMMARIES: ChapterSummary[] = [
     number: 'Cap. I',
     title: 'Carnes & Frangos Proteicos',
     recipesCount: 52,
-    description: 'Frango desfiado, carne moída sequinha, almôndegas e iscas suculentas sem ressecar.',
+    description: 'Frango desfiado, carne moída, almôndegas e iscas.',
     iconName: 'Flame'
   },
   {
@@ -36,7 +36,7 @@ export const CHAPTER_SUMMARIES: ChapterSummary[] = [
     number: 'Cap. II',
     title: 'Peixes & Opções Leves',
     recipesCount: 38,
-    description: 'Tilápia, merluza e peixes brancos populares que não ficam borrachudos nem soltam água.',
+    description: 'Tilápia, merluza e peixes populares que não soltam água.',
     iconName: 'Fish'
   },
   {
@@ -44,7 +44,7 @@ export const CHAPTER_SUMMARIES: ChapterSummary[] = [
     number: 'Cap. III',
     title: 'Acompanhamentos & Legumes Nutritivos',
     recipesCount: 58,
-    description: 'Purês aveludados, arroz integral soltinho e legumes do dia a dia no ponto perfeito.',
+    description: 'Purês aveludados, arroz soltinho e legumes no ponto.',
     iconName: 'Leaf'
   },
   {
@@ -52,7 +52,7 @@ export const CHAPTER_SUMMARIES: ChapterSummary[] = [
     number: 'Cap. IV',
     title: 'Lanches & Salgados Práticos',
     recipesCount: 42,
-    description: 'Tortas de liquidificador, muffins e salgados fit para tirar do freezer e aquecer.',
+    description: 'Tortas de liquidificador e salgados fit.',
     iconName: 'Sandwich'
   },
   {
@@ -60,7 +60,7 @@ export const CHAPTER_SUMMARIES: ChapterSummary[] = [
     number: 'Cap. V',
     title: 'Molhos, Temperos & Bases Coringa',
     recipesCount: 34,
-    description: 'Molhos de tomate caseiros e temperos naturais em cubos para dar sabor instantâneo.',
+    description: 'Molhos caseiros e cubos de tempero natural.',
     iconName: 'Sparkles'
   },
   {
@@ -68,7 +68,7 @@ export const CHAPTER_SUMMARIES: ChapterSummary[] = [
     number: 'Cap. VI',
     title: 'Sobremesas & Doces Fit Sem Culpa',
     recipesCount: 32,
-    description: 'Doces saudáveis sem açúcar refinado para matar a vontade sem sair da dieta.',
+    description: 'Doces saudáveis sem açúcar refinado.',
     iconName: 'Heart'
   }
 ];
@@ -77,16 +77,16 @@ export const FEATURED_RECIPES: FeaturedRecipe[] = [
   {
     id: 'escondidinho-frango',
     category: 'Proteína / Almoço Rápido',
-    name: 'Escondidinho Fit de Frango Cremoso com Batata Doce/Inglesa',
-    description: 'Peito de frango desfiado, bem temperado, coberto com purê leve e requeijão fit.',
+    name: 'Escondidinho Fit de Frango Cremoso com Batata',
+    description: 'Peito de frango desfiado temperado com purê leve e requeijão fit.',
     prepTime: '20 min',
     freezerDays: 60,
     calories: 310,
     protein: 35,
     carbs: 28,
     fat: 7,
-    tag: 'Sem Glúten',
-    secretTip: 'O purê sela o frango desfiado, mantendo a suculência e o sabor de feito na hora após o micro-ondas.'
+    tag: 'Almoço Rápido',
+    secretTip: 'O purê sela o frango, mantendo a suculência após o micro-ondas.'
   },
   {
     id: 'iscas-peixe-airfryer',
@@ -99,21 +99,21 @@ export const FEATURED_RECIPES: FeaturedRecipe[] = [
     protein: 32,
     carbs: 12,
     fat: 6,
-    tag: 'Rico em Fibras',
-    secretTip: 'A crosta de aveia impede que o peixe solte água no congelador, voltando a ficar crocante na Airfryer em 4 minutos.'
+    tag: 'Crocante na Airfryer',
+    secretTip: 'A crosta de aveia impede que o peixe solte água no congelador, voltando a ficar crocante na Airfryer em 4 min.'
   },
   {
-    id: 'torta-liquidificador',
+    id: 'torta-salgada-liquidificador',
     category: 'Lanche / Jantar Rápido',
-    name: 'Torta Salgada de Liquidificador com Legumes e Ovos',
-    description: 'Prática, fofinha e perfeita para salvar os dias em que você chega cansada.',
+    name: 'Torta Salgada de Liquidificador com Legumes',
+    description: 'Prática, fofinha e porcionada para salvar os dias em que você chega cansada.',
     prepTime: '15 min',
     freezerDays: 30,
     calories: 195,
     protein: 14,
     carbs: 16,
     fat: 8,
-    tag: 'Sem Lactose',
+    tag: 'Jantar Rápido',
     secretTip: 'Porcionada individualmente para aquecer direto no pote sem murchar.'
   }
 ];

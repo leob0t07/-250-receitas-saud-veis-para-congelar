@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChefHat, Flame, Timer, Snowflake, Clock } from 'lucide-react';
+import { ChefHat, Flame, Timer, Snowflake, Clock, Calendar } from 'lucide-react';
 
 export const UniqueMechanism: React.FC = () => {
   const steps = [
@@ -11,10 +11,8 @@ export const UniqueMechanism: React.FC = () => {
         'Prepare os cubos de tempero caseiro e a base de alho/cebola que dão sabor de comida fresca a qualquer prato, sujando apenas o liquidificador.',
       icon: ChefHat,
       color: 'emerald',
-      bgColor: 'bg-emerald-50',
-      iconColor: 'text-emerald-700',
       iconBg: 'bg-emerald-100',
-      borderColor: 'border-emerald-200',
+      iconColor: 'text-emerald-700',
     },
     {
       number: 'Etapa 2',
@@ -24,10 +22,8 @@ export const UniqueMechanism: React.FC = () => {
         'Aprenda o frango desfiado macio e a carne moída molhadinha com molho de tomate que viram panquecas, escondidinhos e fricassés na mesma semana.',
       icon: Flame,
       color: 'amber',
-      bgColor: 'bg-amber-50/50',
-      iconColor: 'text-amber-700',
       iconBg: 'bg-amber-100',
-      borderColor: 'border-amber-200',
+      iconColor: 'text-amber-700',
     },
     {
       number: 'Etapa 3',
@@ -37,10 +33,8 @@ export const UniqueMechanism: React.FC = () => {
         'O segredo simples para os legumes ficarem crocantes e o purê ultra cremoso sem nunca ficarem empapados ou com "gosto de geladeira".',
       icon: Timer,
       color: 'blue',
-      bgColor: 'bg-blue-50/50',
-      iconColor: 'text-blue-700',
       iconBg: 'bg-blue-100',
-      borderColor: 'border-blue-200',
+      iconColor: 'text-blue-700',
     },
     {
       number: 'Etapa 4',
@@ -50,10 +44,8 @@ export const UniqueMechanism: React.FC = () => {
         'Coloque em potes normais de plástico ou vidro, etiquete com fita crepe e aproveite suas noites totalmente livres de segunda a domingo.',
       icon: Snowflake,
       color: 'indigo',
-      bgColor: 'bg-indigo-50/50',
-      iconColor: 'text-indigo-700',
       iconBg: 'bg-indigo-100',
-      borderColor: 'border-indigo-200',
+      iconColor: 'text-indigo-700',
     },
   ];
 
@@ -62,12 +54,18 @@ export const UniqueMechanism: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <span className="text-xs sm:text-sm font-montserrat font-extrabold text-emerald-800 bg-emerald-100 px-3.5 py-1.5 rounded-full uppercase tracking-wider inline-block mb-2 sm:mb-3">
-            Como Funciona o Método Por Dentro
-          </span>
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-montserrat font-bold uppercase tracking-wider mb-3">
+            <Calendar className="w-3.5 h-3.5 text-emerald-700" />
+            <span>Como Funciona o Método Por Dentro</span>
+          </div>
+
           <h2 className="font-montserrat text-2xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-tight uppercase">
             Tão Fácil Que Parece Trapaça: As 4 Etapas do Seu Método de Organização
           </h2>
+
+          <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-slate-600 leading-relaxed font-medium">
+            📅 <strong>Quer Organizar a Semana Toda de Uma Vez?</strong> Conheça o Método "Semana Pronta em 1h30" para deixar o almoço e jantar da semana inteira etiquetados no domingo sem complicação:
+          </p>
         </div>
 
         {/* 4 Steps Bento Grid */}

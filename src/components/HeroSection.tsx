@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Zap, Heart, CheckCircle2, Award, ArrowDown } from 'lucide-react';
+import { ShieldCheck, ArrowRight, Heart, CheckCircle2, Award, ArrowDown, Smartphone, Tag, ShoppingCart, Box } from 'lucide-react';
 
 interface HeroSectionProps {
   onCtaClick: () => void;
@@ -8,28 +8,31 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick, onQuizClick }) => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-emerald-50/70 via-white to-neutral-50 pt-6 pb-12 sm:pt-12 sm:pb-20 border-b border-emerald-100/60 font-poppins">
-      {/* Decorative background foliage accents */}
+    <section className="relative overflow-hidden bg-gradient-to-b from-emerald-50/70 via-white to-neutral-50 pt-6 pb-12 sm:pt-10 sm:pb-20 border-b border-emerald-100/60 font-poppins">
+      {/* Decorative background accents */}
       <div className="absolute top-0 right-0 w-72 sm:w-96 h-72 sm:h-96 bg-emerald-200/20 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
       <div className="absolute bottom-10 left-0 w-64 sm:w-80 h-64 sm:h-80 bg-amber-200/20 rounded-full blur-3xl pointer-events-none -ml-20"></div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Top Badges & Announcement */}
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-5 sm:mb-8">
-          {/* Eyebrow pequeno em cima */}
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-montserrat font-extrabold tracking-wide uppercase mb-3 sm:mb-4 border border-emerald-200/80 shadow-2xs">
-            +250 receitas deliciosas
-          </span>
+          {/* Superhead (Aviso de Topo) */}
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-900 text-xs sm:text-sm font-montserrat font-bold tracking-wide mb-3 sm:mb-4 border border-emerald-200/90 shadow-2xs">
+            <Smartphone className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
+            <span>Edição Digital 2026 · Acesso Imediato no Celular, Tablet e Computador</span>
+          </div>
 
           {/* Main Headline */}
           <h1 className="font-montserrat text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.18] sm:leading-[1.12] tracking-tight uppercase text-center text-balance">
-            Alimentação da semana <span className="text-emerald-600 underline decoration-amber-400 decoration-wavy decoration-2">cozinhando só em um dia</span>
+            +250 Receitas Saudáveis & Práticas para Ter Sempre no Freezer
           </h1>
 
-          {/* Sub-headline */}
-          <p className="mt-3.5 sm:mt-5 text-sm sm:text-lg md:text-xl text-slate-700 leading-relaxed max-w-3xl font-medium font-poppins text-center text-balance">
-            Prepare marmitas saborosas e lanches práticos em apenas 1h30 no domingo — com comida de verdade, ingredientes baratos e usando potes comuns.
-          </p>
+          {/* Destaque posicionado abaixo com tamanho menor */}
+          <div className="mt-2.5 sm:mt-3.5 text-center">
+            <span className="font-montserrat text-base sm:text-xl md:text-2xl font-extrabold text-emerald-700 underline decoration-amber-400 decoration-wavy decoration-2">
+              (Com Sabor de Feitas na Hora)
+            </span>
+          </div>
         </div>
 
         {/* Hero Visual Showcase & Direct CTA */}
@@ -61,41 +64,63 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick, onQuizClic
               </div>
             </div>
 
-            {/* Quick Feature Cards Grid on Mobile (Perfect Centering) */}
+            {/* Texto posicionado logo após a imagem */}
+            <p className="mt-4 sm:mt-5 text-center text-sm sm:text-lg md:text-xl text-slate-800 font-semibold font-poppins max-w-2xl mx-auto leading-relaxed text-balance">
+              + de 250 receitas de refeições saudáveis, prontas e deliciosas para você cozinhar uma vez e comer bem a semana inteira.
+            </p>
+
+            {/* Badges de Destaque: [+250 Receitas Testadas] [R$ 9,90 Preço Promocional] [Ingredientes Baratos] [Potes Comuns] */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mt-3 sm:mt-4 text-center">
               <div className="bg-white p-2.5 sm:p-3 rounded-xl border border-emerald-100 shadow-2xs flex flex-col items-center justify-center text-center">
-                <span className="block text-emerald-700 font-montserrat font-black text-base sm:text-xl leading-tight">1h30</span>
-                <span className="text-[10px] sm:text-xs text-slate-600 font-semibold leading-tight font-poppins mt-0.5">Cozinha 1x no Domingo</span>
+                <div className="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center mb-1">
+                  <CheckCircle2 className="w-4 h-4" />
+                </div>
+                <span className="font-montserrat font-black text-xs sm:text-sm text-emerald-800 leading-tight">+250 Receitas</span>
+                <span className="text-[10px] text-slate-500 font-semibold">Testadas e Aprovadas</span>
               </div>
-              <div className="bg-white p-2.5 sm:p-3 rounded-xl border border-emerald-100 shadow-2xs flex flex-col items-center justify-center text-center">
-                <span className="block text-emerald-700 font-montserrat font-black text-base sm:text-xl leading-tight">90 Dias</span>
-                <span className="text-[10px] sm:text-xs text-slate-600 font-semibold leading-tight font-poppins mt-0.5">Validade no Freezer</span>
+
+              <div className="bg-white p-2.5 sm:p-3 rounded-xl border border-amber-100 shadow-2xs flex flex-col items-center justify-center text-center">
+                <div className="w-7 h-7 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center mb-1">
+                  <Tag className="w-4 h-4" />
+                </div>
+                <span className="font-montserrat font-black text-xs sm:text-sm text-amber-800 leading-tight">R$ 9,90</span>
+                <span className="text-[10px] text-slate-500 font-semibold">Preço Promocional</span>
               </div>
+
               <div className="bg-white p-2.5 sm:p-3 rounded-xl border border-emerald-100 shadow-2xs flex flex-col items-center justify-center text-center">
-                <span className="block text-emerald-700 font-montserrat font-black text-base sm:text-xl leading-tight">R$ 800</span>
-                <span className="text-[10px] sm:text-xs text-slate-600 font-semibold leading-tight font-poppins mt-0.5">Economia Mensal</span>
+                <div className="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center mb-1">
+                  <ShoppingCart className="w-4 h-4" />
+                </div>
+                <span className="font-montserrat font-black text-xs sm:text-sm text-slate-800 leading-tight">Ingredientes</span>
+                <span className="text-[10px] text-slate-500 font-semibold">Baratos de Feira</span>
               </div>
+
               <div className="bg-white p-2.5 sm:p-3 rounded-xl border border-emerald-100 shadow-2xs flex flex-col items-center justify-center text-center">
-                <span className="block text-emerald-700 font-montserrat font-black text-base sm:text-xl leading-tight">100% Fit</span>
-                <span className="text-[10px] sm:text-xs text-slate-600 font-semibold leading-tight font-poppins mt-0.5">Macros Calculados</span>
+                <div className="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center mb-1">
+                  <Box className="w-4 h-4" />
+                </div>
+                <span className="font-montserrat font-black text-xs sm:text-sm text-slate-800 leading-tight">Potes Comuns</span>
+                <span className="text-[10px] text-slate-500 font-semibold">Vidro ou Plástico</span>
               </div>
             </div>
           </div>
 
-          {/* Main Direct CTA Button (Centered & responsive touch size) */}
+          {/* Main Direct CTA Button */}
           <div className="w-full max-w-md sm:max-w-lg mt-6 sm:mt-8 flex flex-col items-center text-center px-1">
             <button
               onClick={onCtaClick}
-              className="btn-cta-gold w-full py-4 sm:py-5 px-5 sm:px-6 rounded-xl sm:rounded-2xl font-montserrat font-black text-lg sm:text-2xl text-neutral-950 uppercase tracking-wider flex items-center justify-center gap-2.5 sm:gap-3 cursor-pointer group shadow-xl min-h-[54px] sm:min-h-[64px]"
+              className="btn-cta-gold w-full py-4 sm:py-5 px-5 sm:px-6 rounded-xl sm:rounded-2xl font-montserrat font-black text-base sm:text-xl text-neutral-950 uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer group shadow-xl min-h-[54px] sm:min-h-[64px] transition-transform hover:scale-102"
             >
-              <Zap className="w-5 h-5 sm:w-6 sm:h-6 fill-neutral-950 text-neutral-950 shrink-0 group-hover:scale-110 transition-transform" />
-              <span>Quero Experimentar!</span>
+              <span>QUERO MEU ACERVO DE RECEITAS</span>
+              <ArrowRight className="w-5 h-5 text-neutral-950 shrink-0 group-hover:translate-x-1 transition-transform" />
             </button>
-            <p className="mt-2 text-xs sm:text-sm text-slate-500 font-medium font-poppins">
-              Acesso Imediato no E-mail & WhatsApp · Pagamento Único sem Mensalidade
+
+            {/* Micro-copy de apoio */}
+            <p className="mt-2.5 text-xs sm:text-sm text-slate-600 font-medium font-poppins text-center">
+              Acesso imediato no E-mail & WhatsApp · Pagamento Único sem Mensalidade · Garantia de 30 Dias.
             </p>
 
-            {/* Micro-copy Security & Trust Badges (Centered) */}
+            {/* Micro-copy Security & Trust Badges */}
             <div className="flex items-center justify-center gap-3 sm:gap-6 mt-4 pt-3 border-t border-slate-200/80 w-full text-[11px] sm:text-xs text-slate-600 font-medium flex-wrap">
               <span className="flex items-center gap-1">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
@@ -103,21 +128,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onCtaClick, onQuizClic
               </span>
               <span className="flex items-center gap-1">
                 <Award className="w-3.5 h-3.5 text-amber-500 shrink-0" />
-                Garantia de 30 Dias
+                Garantia Blindada de 30 Dias
               </span>
               <span className="flex items-center gap-1">
                 <Heart className="w-3.5 h-3.5 text-rose-500 shrink-0" />
-                Textura Feita na Hora
+                Sabor de Feito na Hora
               </span>
             </div>
 
-            {/* Bridge to Biometric Quiz (Centered) */}
+            {/* Bridge to Biometric Quiz */}
             <div className="mt-6 sm:mt-8 pt-2 w-full text-center">
               <button
                 onClick={onQuizClick}
-                className="inline-flex items-center justify-center gap-1.5 text-emerald-800 bg-emerald-100 hover:bg-emerald-200 border border-emerald-300 font-montserrat font-bold text-xs sm:text-sm px-4 py-2.5 rounded-full transition-colors cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 text-emerald-800 bg-emerald-100 hover:bg-emerald-200 border border-emerald-300 font-montserrat font-bold text-xs sm:text-sm px-4 py-2.5 rounded-full transition-colors cursor-pointer"
               >
-                <span>Faça o seu cardápio ideal, menos de 1 min</span>
+                <span>🎯 Descubra o Cardápio Ideal para o Seu Perfil (Menos de 1 min)</span>
                 <ArrowDown className="w-3.5 h-3.5 text-emerald-700 animate-bounce shrink-0" />
               </button>
             </div>

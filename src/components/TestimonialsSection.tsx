@@ -28,10 +28,10 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onCtaC
             ))}
           </div>
           <h2 className="font-montserrat text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 leading-tight tracking-tight uppercase">
-            A <span className="text-amber-500">Melhor Opção</span> Para Quem Quer Praticidade e Saúde Sem Gastar Horas Na Cozinha
+            Quem Usa o Acervo <span className="text-emerald-700">Nunca Mais Volta</span> a Perder Horas no Fogão
           </h2>
           <p className="mt-2.5 sm:mt-3 text-xs sm:text-base text-slate-600 font-medium">
-            Fotos reais enviadas por quem colocou o método em prática com potes caseiros comuns:
+            Fotos reais enviadas por quem colocou as receitas em prática com potes caseiros comuns de plástico ou vidro:
           </p>
         </div>
 

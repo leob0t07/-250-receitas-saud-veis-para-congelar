@@ -21,10 +21,10 @@ export const PricingTable: React.FC = () => {
             Tabela Promocional Por Lote
           </span>
           <h2 className="font-montserrat text-2xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-tight tracking-tight uppercase">
-            Leve Agora E Aproveite Nossa <span className="text-rose-600">Super Promoção!</span>
+            Escolha Sua Edição e Aproveite a <span className="text-rose-600">Super Promoção!</span>
           </h2>
           <p className="mt-2.5 sm:mt-3 text-xs sm:text-base text-slate-600 font-medium">
-            Escolha o pacote ideal para sua rotina. Pagamento único com acesso imediato e vitalício.
+            Acesso vitalício e imediato no seu celular e computador. Escolha a melhor opção para sua rotina:
           </p>
         </div>
 

@@ -19,7 +19,7 @@ export const BonusStack: React.FC<BonusStackProps> = ({ onCtaClick }) => {
             Compre Hoje e Leve Mais 3 Bônus Especiais <span className="text-emerald-600 underline">100% Grátis</span>
           </h2>
           <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-slate-600 leading-relaxed font-medium">
-            Se você comprasse estes materiais separadamente pagaria R$ 153,00. Hoje eles entram como cortesia imediata no seu acesso.
+            Se você comprasse estes materiais separadamente pagaria R$ 153,00. Hoje eles entram como cortesia imediata no seu acesso ao acervo completo.
           </p>
         </div>
 

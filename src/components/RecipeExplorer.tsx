@@ -30,11 +30,11 @@ export const RecipeExplorer: React.FC<RecipeExplorerProps> = ({ onCtaClick }) =>
           </div>
 
           <h2 className="font-montserrat text-2xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-tight uppercase">
-            +250 Receitas Divididas Em 6 Capítulos Estratégicos
+            +250 Receitas Divididas em 6 Capítulos Estratégicos
           </h2>
 
           <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-slate-600 leading-relaxed font-medium">
-            Testadas para quem não tem tempo a perder e não quer gastar fortunas no mercado.
+            Adeus receitas difíceis com ingredientes caros. Tudo feito com alimentos simples do seu supermercado.
           </p>
         </div>
 

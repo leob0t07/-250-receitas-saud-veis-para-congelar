@@ -23,10 +23,10 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onCtaClick }) => {
               Tire Suas Dúvidas
             </span>
             <h2 className="font-montserrat text-2xl sm:text-4xl font-black text-slate-900 leading-tight uppercase">
-              Perguntas Frequentes
+              Perguntas Frequentes Sobre o Acervo
             </h2>
             <p className="mt-2.5 sm:mt-3 text-xs sm:text-base text-slate-600 font-medium">
-              Confira as respostas para as dúvidas mais comuns de novos alunos:
+              Confira as respostas para as dúvidas mais comuns sobre as +250 receitas e o acesso imediato:
             </p>
           </div>
 
