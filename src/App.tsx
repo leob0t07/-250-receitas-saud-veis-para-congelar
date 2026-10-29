@@ -16,10 +16,12 @@ import { PricingTable } from './components/PricingTable';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { GuaranteeSection } from './components/GuaranteeSection';
 import { FaqSection } from './components/FaqSection';
+import { UpgradeModal } from './components/UpgradeModal';
 import { Zap, ChevronUp } from 'lucide-react';
 
 export default function App() {
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
+  const [isUpgradeModalOpen, setIsUpgradeModalOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +59,10 @@ export default function App() {
         />
 
         {/* SEÇÃO 2: Mini Quiz Biométrico & Diagnóstico Opcional */}
-        <MiniQuiz onCtaClick={scrollToPricing} />
+        <MiniQuiz
+          onCtaClick={scrollToPricing}
+          onOpenUpgradeModal={() => setIsUpgradeModalOpen(true)}
+        />
 
         {/* Comparativo Real de Rotina (Posicionado logo após o Mini Quiz conforme solicitado) */}
         <RoutineComparison />
@@ -75,7 +80,7 @@ export default function App() {
         <BonusStack onCtaClick={scrollToPricing} />
 
         {/* SEÇÃO 7: Tabela de Checkout & Ofertas */}
-        <PricingTable />
+        <PricingTable onOpenUpgradeModal={() => setIsUpgradeModalOpen(true)} />
 
         {/* SEÇÃO 8: Prova Social & Depoimentos Realistas (Estilo Redes Sociais) */}
         <TestimonialsSection onCtaClick={scrollToPricing} />
@@ -86,6 +91,14 @@ export default function App() {
         {/* SEÇÃO 10: FAQ (Perguntas Frequentes) & Rodapé de Fechamento */}
         <FaqSection onCtaClick={scrollToPricing} />
       </main>
+
+      {/* Pop-up Exclusiva de Upgrade (Desconto no Plano Completo por R$ 15,99) */}
+      <UpgradeModal
+        isOpen={isUpgradeModalOpen}
+        onClose={() => setIsUpgradeModalOpen(false)}
+        upgradeCheckoutUrl="https://pay.cakto.com.br/3cjgha8_953826"
+        basicCheckoutUrl="https://pay.cakto.com.br/xtrakpo_953780"
+      />
 
       {/* Mobile Sticky Action Bar (Strictly <= 15% viewport height rule with Poppins/Montserrat) */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 px-3.5 shadow-2xl flex items-center justify-between gap-3">

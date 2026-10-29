@@ -1,16 +1,11 @@
 import React from 'react';
 import { ShieldCheck, Check, Star, Sparkles, Zap, Lock, ArrowRight } from 'lucide-react';
 
-export const PricingTable: React.FC = () => {
-  const trackInitiateCheckout = (planName: string, value: number) => {
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'InitiateCheckout', {
-        content_name: planName,
-        value: value,
-        currency: 'BRL',
-      });
-    }
-  };
+interface PricingTableProps {
+  onOpenUpgradeModal?: () => void;
+}
+
+export const PricingTable: React.FC<PricingTableProps> = ({ onOpenUpgradeModal }) => {
 
   return (
     <section id="precos" className="py-12 sm:py-20 bg-neutral-100 border-b border-emerald-100 relative font-poppins">
@@ -88,18 +83,19 @@ export const PricingTable: React.FC = () => {
               </ul>
             </div>
 
-            <a
-              href="https://pay.cakto.com.br/xtrakpo_953780"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
               onClick={() => {
-                trackInitiateCheckout('Kit Freezer Essencial', 9.90);
+                if (onOpenUpgradeModal) {
+                  onOpenUpgradeModal();
+                } else {
+                  window.open('https://pay.cakto.com.br/xtrakpo_953780', '_blank', 'noopener,noreferrer');
+                }
               }}
-              className="w-full bg-white hover:bg-emerald-50 text-emerald-900 font-montserrat font-black text-xs sm:text-sm uppercase tracking-wider py-4 rounded-xl sm:rounded-2xl cursor-pointer shadow-lg transition-transform hover:scale-102 flex items-center justify-center gap-2 min-h-[50px] text-center no-underline"
+              className="w-full bg-white hover:bg-emerald-50 text-emerald-900 font-montserrat font-black text-xs sm:text-sm uppercase tracking-wider py-4 rounded-xl sm:rounded-2xl cursor-pointer shadow-lg transition-transform hover:scale-102 flex items-center justify-center gap-2 min-h-[50px] text-center"
             >
               <span>Comprar Agora</span>
               <ArrowRight className="w-4 h-4 text-emerald-800 shrink-0" />
-            </a>
+            </button>
           </div>
 
           {/* Plan 2: PREMIUM MAIS ESCOLHIDO (19,90) - HIGHLIGHTED */}
@@ -177,9 +173,6 @@ export const PricingTable: React.FC = () => {
               href="https://pay.cakto.com.br/ttadqb9"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => {
-                trackInitiateCheckout('Freezer Inteligente Premium', 19.90);
-              }}
               className="btn-cta-gold w-full text-neutral-950 font-montserrat font-black text-xs sm:text-sm md:text-base uppercase tracking-wide sm:tracking-wider py-3.5 sm:py-4 px-3 sm:px-6 rounded-xl sm:rounded-2xl cursor-pointer shadow-xl flex items-center justify-center gap-1.5 sm:gap-2 min-h-[48px] sm:min-h-[52px] text-center no-underline transition-transform hover:scale-102"
             >
               <Zap className="w-4 h-4 sm:w-5 sm:h-5 fill-neutral-950 text-neutral-950 shrink-0" />

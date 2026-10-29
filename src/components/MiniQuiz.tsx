@@ -3,9 +3,10 @@ import { User, Target, Check, RotateCcw, Sparkles, TrendingUp, DollarSign, Clock
 
 interface MiniQuizProps {
   onCtaClick: () => void;
+  onOpenUpgradeModal?: () => void;
 }
 
-export const MiniQuiz: React.FC<MiniQuizProps> = ({ onCtaClick }) => {
+export const MiniQuiz: React.FC<MiniQuizProps> = ({ onCtaClick, onOpenUpgradeModal }) => {
   const [step, setStep] = useState<number>(1);
   const [isCalculating, setIsCalculating] = useState<boolean>(false);
   const [progressMsg, setProgressMsg] = useState<string>('Processando dados biométricos...');
@@ -490,15 +491,6 @@ export const MiniQuiz: React.FC<MiniQuizProps> = ({ onCtaClick }) => {
                     href="https://pay.cakto.com.br/ttadqb9"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => {
-                      if (typeof window !== 'undefined' && (window as any).fbq) {
-                        (window as any).fbq('track', 'InitiateCheckout', {
-                          content_name: 'Freezer Inteligente Premium (Quiz)',
-                          value: 19.90,
-                          currency: 'BRL',
-                        });
-                      }
-                    }}
                     className="btn-cta-gold w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-montserrat font-black text-xs sm:text-base text-neutral-950 uppercase tracking-wider cursor-pointer shadow-lg inline-flex items-center justify-center gap-2 min-h-[50px] no-underline text-center transition-transform hover:scale-102"
                   >
                     <Zap className="w-4 h-4 text-neutral-950 shrink-0" />
@@ -506,23 +498,18 @@ export const MiniQuiz: React.FC<MiniQuizProps> = ({ onCtaClick }) => {
                     <ChevronRight className="w-4 h-4 text-neutral-950 shrink-0" />
                   </a>
 
-                  <a
-                    href="https://pay.cakto.com.br/xtrakpo_953780"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
                     onClick={() => {
-                      if (typeof window !== 'undefined' && (window as any).fbq) {
-                        (window as any).fbq('track', 'InitiateCheckout', {
-                          content_name: 'Kit Freezer Essencial (Quiz)',
-                          value: 9.90,
-                          currency: 'BRL',
-                        });
+                      if (onOpenUpgradeModal) {
+                        onOpenUpgradeModal();
+                      } else {
+                        window.open('https://pay.cakto.com.br/xtrakpo_953780', '_blank', 'noopener,noreferrer');
                       }
                     }}
-                    className="w-full sm:w-auto px-5 py-3.5 rounded-xl font-montserrat font-black text-xs sm:text-sm text-emerald-950 bg-emerald-100 hover:bg-emerald-200 border border-emerald-300 uppercase tracking-wider cursor-pointer inline-flex items-center justify-center gap-1.5 min-h-[50px] no-underline text-center transition-colors"
+                    className="w-full sm:w-auto px-5 py-3.5 rounded-xl font-montserrat font-black text-xs sm:text-sm text-emerald-950 bg-emerald-100 hover:bg-emerald-200 border border-emerald-300 uppercase tracking-wider cursor-pointer inline-flex items-center justify-center gap-1.5 min-h-[50px] text-center transition-colors"
                   >
                     <span>Ou Edição Básica (50 Receitas · R$ 9,90)</span>
-                  </a>
+                  </button>
                 </div>
 
                 <div className="flex items-center justify-center gap-3 text-xs text-slate-500 font-poppins pt-1">
