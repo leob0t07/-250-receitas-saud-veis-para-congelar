@@ -11,6 +11,7 @@ export interface FeaturedRecipe {
   fat: number;
   tag: string;
   secretTip: string;
+  imageUrl?: string;
 }
 
 export interface ChapterSummary {
@@ -28,7 +29,7 @@ export const CHAPTER_SUMMARIES: ChapterSummary[] = [
     number: 'Cap. I',
     title: 'Carnes & Frangos Proteicos',
     recipesCount: 52,
-    description: 'Frango desfiado, carne moída, almôndegas e iscas.',
+    description: 'Desfiados suculentos, iscas e almôndegas que não ressecam.',
     iconName: 'Flame'
   },
   {
@@ -36,15 +37,15 @@ export const CHAPTER_SUMMARIES: ChapterSummary[] = [
     number: 'Cap. II',
     title: 'Peixes & Opções Leves',
     recipesCount: 38,
-    description: 'Tilápia, merluza e peixes populares que não soltam água.',
+    description: 'Tilápia e peixes populares preparados sem soltar água.',
     iconName: 'Fish'
   },
   {
     id: 'cap-3',
     number: 'Cap. III',
-    title: 'Acompanhamentos & Legumes Nutritivos',
+    title: 'Acompanhamentos & Legumes',
     recipesCount: 58,
-    description: 'Purês aveludados, arroz soltinho e legumes no ponto.',
+    description: 'Purês aveludados e legumes no ponto certo.',
     iconName: 'Leaf'
   },
   {
@@ -52,15 +53,15 @@ export const CHAPTER_SUMMARIES: ChapterSummary[] = [
     number: 'Cap. IV',
     title: 'Lanches & Salgados Práticos',
     recipesCount: 42,
-    description: 'Tortas de liquidificador e salgados fit.',
+    description: 'Wraps, tortinhas de liquidificador e lanches rápidos.',
     iconName: 'Sandwich'
   },
   {
     id: 'cap-5',
     number: 'Cap. V',
-    title: 'Molhos, Temperos & Bases Coringa',
+    title: 'Molhos & Temperos Coringa',
     recipesCount: 34,
-    description: 'Molhos caseiros e cubos de tempero natural.',
+    description: 'Bases naturais para dar sabor instantâneo.',
     iconName: 'Sparkles'
   },
   {
@@ -68,52 +69,55 @@ export const CHAPTER_SUMMARIES: ChapterSummary[] = [
     number: 'Cap. VI',
     title: 'Sobremesas & Doces Fit Sem Culpa',
     recipesCount: 32,
-    description: 'Doces saudáveis sem açúcar refinado.',
+    description: 'Doces saudáveis para matar a vontade sem sair da dieta.',
     iconName: 'Heart'
   }
 ];
 
 export const FEATURED_RECIPES: FeaturedRecipe[] = [
   {
-    id: 'escondidinho-frango',
-    category: 'Proteína / Almoço Rápido',
-    name: 'Escondidinho Fit de Frango Cremoso com Batata',
-    description: 'Peito de frango desfiado temperado com purê leve e requeijão fit.',
+    id: 'wrap-proteico-frango',
+    category: 'Lanche Prático / Jantar Rápido',
+    name: 'Wrap Proteico de Frango Cremoso com Queijo',
+    description: 'Massa leve recheada com peito de frango temperado na ponta da faca e queijo derretido de dar água na boca.',
+    prepTime: '10 min',
+    freezerDays: 30,
+    calories: 260,
+    protein: 28,
+    carbs: 18,
+    fat: 7,
+    tag: 'Queijo Derretido & Crocante',
+    secretTip: 'Embalado individualmente, vai direto do freezer para a frigideira ou airfryer em 3 minutos mantendo a casquinha crocante e o queijo puxando.',
+    imageUrl: '/images/ugc_wrap_frango.jpg'
+  },
+  {
+    id: 'tortinha-individual-frango',
+    category: 'Lanche da Tarde / Porção Individual',
+    name: 'Tortinha Individual de Frango de Liquidificador',
+    description: 'Massa fofinha batida em minutos com recheio cremoso e úmido de frango e milho. Perfeita para lanche da tarde ou jantar rápido.',
+    prepTime: '15 min',
+    freezerDays: 45,
+    calories: 210,
+    protein: 19,
+    carbs: 14,
+    fat: 8,
+    tag: 'Massa Fofinha & Úmida',
+    secretTip: 'Congelada já assada em forminhas comuns. Reaquece no micro-ondas ou airfryer sem ressecar a massa.',
+    imageUrl: '/images/ugc_tortinha_frango.jpg'
+  },
+  {
+    id: 'escondidinho-fit-frango',
+    category: 'Almoço & Jantar / Confort Food Fit',
+    name: 'Escondidinho Fit de Frango com Batata',
+    description: 'Purê cremoso de batata com recheio bem temperado de frango e cobertura de queijo gratinado dourado.',
     prepTime: '20 min',
     freezerDays: 60,
     calories: 310,
     protein: 35,
     carbs: 28,
     fat: 7,
-    tag: 'Almoço Rápido',
-    secretTip: 'O purê sela o frango, mantendo a suculência após o micro-ondas.'
-  },
-  {
-    id: 'iscas-peixe-airfryer',
-    category: 'Opção Leve / Peixe Barato',
-    name: 'Iscas de Peixe Crocantes na Airfryer',
-    description: 'Filé de peixe branco empanado na farinha de aveia temperada.',
-    prepTime: '15 min',
-    freezerDays: 45,
-    calories: 240,
-    protein: 32,
-    carbs: 12,
-    fat: 6,
-    tag: 'Crocante na Airfryer',
-    secretTip: 'A crosta de aveia impede que o peixe solte água no congelador, voltando a ficar crocante na Airfryer em 4 min.'
-  },
-  {
-    id: 'torta-salgada-liquidificador',
-    category: 'Lanche / Jantar Rápido',
-    name: 'Torta Salgada de Liquidificador com Legumes',
-    description: 'Prática, fofinha e porcionada para salvar os dias em que você chega cansada.',
-    prepTime: '15 min',
-    freezerDays: 30,
-    calories: 195,
-    protein: 14,
-    carbs: 16,
-    fat: 8,
-    tag: 'Jantar Rápido',
-    secretTip: 'Porcionada individualmente para aquecer direto no pote sem murchar.'
+    tag: 'Gratinado Dourado',
+    secretTip: 'Técnica de cozimento com selagem que impede o purê de acumular água ou perder a consistência aveludada ao descongelar.',
+    imageUrl: '/images/ugc_escondidinho_suculento.jpg'
   }
 ];

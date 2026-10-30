@@ -128,13 +128,10 @@ export const MiniQuiz: React.FC<MiniQuizProps> = ({ onCtaClick, onOpenUpgradeMod
             Diagnóstico Interativo
           </span>
           <h2 className="font-montserrat text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 leading-tight uppercase">
-            🎯 Descubra o Cardápio Ideal para o Seu Perfil (Menos de 1 min)
+            🎯 Descubra as Receitas Ideais para o Seu Objetivo (Menos de 1 min)
           </h2>
           <p className="mt-2.5 sm:mt-3 text-xs sm:text-base text-slate-600 font-medium leading-relaxed">
-            Responda 3 perguntas rápidas para calcular sua meta diária e ver as receitas do acervo ideais para você.{' '}
-            <span className="text-slate-500 italic block mt-1">
-              (Este teste é opcional — você também pode rolar a página para ver todas as receitas).
-            </span>
+            Responda 3 perguntas rápidas (opcional) para calcular sua necessidade diária e ver as melhores opções do acervo para você.
           </p>
         </div>
 

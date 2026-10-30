@@ -22,76 +22,76 @@ export const RoutineComparison: React.FC = () => {
               <div>
                 <div className="flex items-center gap-2 text-rose-400 font-montserrat font-black text-base sm:text-lg mb-3">
                   <XCircle className="w-5 h-5 shrink-0" />
-                  <span>Cozinhar Todo Santo Dia</span>
+                  <span>Rotina Sem o Acervo</span>
                 </div>
 
                 <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-rose-100/90 font-medium">
                   <li className="flex items-start gap-2">
                     <span className="text-rose-400 font-bold shrink-0">✕</span>
-                    <span><strong>12 a 14 horas por semana</strong> perdidas em pé na beirada do fogão.</span>
+                    <span><strong>12 a 14 horas por semana</strong> perdidas em pé na beirada do fogão toda noite.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-rose-400 font-bold shrink-0">✕</span>
-                    <span>Pia transbordando de panelas engorduradas e pratos para lavar todas as noites.</span>
+                    <span>Pia transbordando de panelas engorduradas e pratos para lavar todos os dias.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-rose-400 font-bold shrink-0">✕</span>
-                    <span>Desperdício constante de legumes que apodrecem na gaveta da geladeira.</span>
+                    <span>Cansaço mental de chegar do trabalho com fome e não saber o que preparar.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-rose-400 font-bold shrink-0">✕</span>
-                    <span>Cansaço mental de chegar do trabalho e ainda pensar no que fazer.</span>
+                    <span>Apelar para dietas restritivas com saladas sem graça que você abandona em 3 dias.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-rose-400 font-bold shrink-0">✕</span>
-                    <span>Faturas de R$ 600 a R$ 1.200 em iFood, pizzas e lanches por fome e pressa.</span>
+                    <span>Faturas de R$ 600 a R$ 1.200 em delivery, pizzas e salgados calóricos de rua.</span>
                   </li>
                 </ul>
               </div>
 
               <div className="mt-5 pt-3 border-t border-rose-900/50 text-rose-300 text-xs font-semibold">
-                Resultado: Estresse diário, ganho de peso e dinheiro jogado no lixo.
+                Resultado: Estresse na cozinha, peso estagnado e dinheiro desperdiçado.
               </div>
             </div>
 
-            {/* The Smart 1x a Week Way */}
+            {/* The Smart Acervo Way */}
             <div className="bg-emerald-900/40 border border-emerald-500/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 backdrop-blur-xs shadow-lg flex flex-col justify-between relative overflow-hidden">
               <div className="absolute top-0 right-0 bg-emerald-500 text-neutral-950 font-montserrat font-black text-[9px] sm:text-[10px] uppercase tracking-wider py-0.5 sm:py-1 px-2.5 sm:px-3 rounded-bl-lg">
-                Recomendado
+                Vida Prática
               </div>
 
               <div>
                 <div className="flex items-center gap-2 text-emerald-400 font-montserrat font-black text-base sm:text-lg mb-3">
                   <CheckCircle className="w-5 h-5 shrink-0" />
-                  <span>Método 1x Por Semana (1h30)</span>
+                  <span>Com o Acervo de +250 Receitas</span>
                 </div>
 
                 <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-emerald-100 font-medium">
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-400 font-bold shrink-0">✓</span>
-                    <span><strong>Apenas 1h30 no domingo</strong> ouvindo sua música favorita ou podcast.</span>
+                    <span><strong>Refeições e lanches coringa</strong> prontos em 3 a 10 minutos quando bater a fome.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-400 font-bold shrink-0">✓</span>
-                    <span>Você lava a louça <strong>uma única vez na semana</strong> e deixa a pia limpa.</span>
+                    <span>Você prepara na hora ou congela porções individuais em potes comuns.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-400 font-bold shrink-0">✓</span>
-                    <span>Almoço e jantar etiquetados, prontos para aquecer em <strong>3 minutos</strong>.</span>
+                    <span><strong>Comida gostosa de verdade:</strong> wraps crocantes, escondidinhos cremosos e doces fit.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-400 font-bold shrink-0">✓</span>
-                    <span>Textura, vapor aromático e suculência de comida recém-saída da panela.</span>
+                    <span>Sabor e aroma de prato recém-saído da panela sem textura aguada.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-400 font-bold shrink-0">✓</span>
-                    <span><strong>Economia média de R$ 740/mês</strong> aproveitando 100% das compras.</span>
+                    <span><strong>Economia de até R$ 740/mês</strong> aproveitando 100% de ingredientes baratos de feira.</span>
                   </li>
                 </ul>
               </div>
 
               <div className="mt-5 pt-3 border-t border-emerald-700/50 text-emerald-300 text-xs font-semibold">
-                Resultado: Noites livres, corpo em forma e tranquilidade mental.
+                Resultado: Noites livres, corpo em forma e alimentação deliciosa sem estresse.
               </div>
             </div>
           </div>

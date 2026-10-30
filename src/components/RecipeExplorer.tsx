@@ -34,7 +34,7 @@ export const RecipeExplorer: React.FC<RecipeExplorerProps> = ({ onCtaClick }) =>
           </h2>
 
           <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-slate-600 leading-relaxed font-medium">
-            Adeus receitas difíceis com ingredientes caros. Tudo feito com alimentos simples do seu supermercado.
+            Adeus receitas chatas e ingredientes caros. Tudo feito com o que você já tem na feira e no açougue.
           </p>
         </div>
 
@@ -95,10 +95,10 @@ export const RecipeExplorer: React.FC<RecipeExplorerProps> = ({ onCtaClick }) =>
               Prévia do Livro Digital
             </span>
             <h3 className="font-montserrat text-xl sm:text-3xl font-black text-slate-900 mt-2 uppercase">
-              Veja 3 Exemplos Campeões de Vendas do Acervo:
+              Veja 3 Amostras de Comfort Food Saudável:
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 mt-1">
-              Pratos saborosos, rápidos de montar (15 a 20 minutos) e que saem do congelador com textura de comida fresca.
+              Fotos em close de pratos irresistíveis com queijo derretido, bordas douradas e texturas apetitosas. Zero comida de dieta restritiva ou salada triste.
             </p>
           </div>
 
@@ -106,38 +106,58 @@ export const RecipeExplorer: React.FC<RecipeExplorerProps> = ({ onCtaClick }) =>
             {FEATURED_RECIPES.map((recipe, index) => (
               <div
                 key={recipe.id}
-                className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 border-2 border-slate-200 hover:border-emerald-400 transition-all shadow-md flex flex-col justify-between relative overflow-hidden"
+                className="bg-white rounded-2xl sm:rounded-3xl border-2 border-slate-200 hover:border-emerald-400 transition-all shadow-md flex flex-col justify-between overflow-hidden"
               >
-                {/* Category Header Badge */}
-                <div className="mb-3 flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-montserrat font-black uppercase tracking-wider text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">
-                    Amostra #{index + 1} · {recipe.category}
-                  </span>
-                  <span className="bg-emerald-100 text-emerald-800 text-[10px] font-montserrat font-bold px-2 py-0.5 rounded-md">
-                    {recipe.tag}
-                  </span>
-                </div>
-
-                <div>
-                  <h4 className="font-montserrat font-black text-slate-900 text-base sm:text-lg leading-snug mb-2">
-                    {recipe.name}
-                  </h4>
-
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium mb-4">
-                    {recipe.description}
-                  </p>
-
-                  {/* Secret of Freeze Box (Highlighted as requested) */}
-                  <div className="bg-amber-50 border border-amber-200/90 rounded-xl p-3 sm:p-3.5 mb-4 text-xs text-amber-950 font-poppins shadow-2xs">
-                    <div className="flex items-center gap-1.5 font-montserrat font-extrabold text-[11px] sm:text-xs text-amber-900 uppercase tracking-wide mb-1">
-                      <Zap className="w-3.5 h-3.5 text-amber-600 fill-amber-600 shrink-0" />
-                      <span>Segredo de Congelamento:</span>
+                {/* Photo in macro close-up */}
+                {recipe.imageUrl && (
+                  <div className="relative w-full h-48 sm:h-52 overflow-hidden bg-slate-100 border-b border-slate-100">
+                    <img
+                      src={recipe.imageUrl}
+                      alt={recipe.name}
+                      width={600}
+                      height={400}
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div className="absolute top-2.5 left-2.5">
+                      <span className="text-[10px] font-montserrat font-black uppercase tracking-wider text-slate-900 bg-white/90 backdrop-blur-xs px-2.5 py-1 rounded-md shadow-xs">
+                        Amostra #{index + 1}
+                      </span>
                     </div>
-                    <p className="leading-relaxed font-medium text-amber-900">
-                      {recipe.secretTip}
-                    </p>
+                    <div className="absolute bottom-2.5 right-2.5">
+                      <span className="bg-emerald-600 text-white text-[10px] font-montserrat font-bold px-2.5 py-1 rounded-md shadow-xs">
+                        {recipe.tag}
+                      </span>
+                    </div>
                   </div>
-                </div>
+                )}
+
+                <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <span className="text-[10px] font-montserrat font-bold uppercase tracking-wider text-emerald-700 block mb-1">
+                      {recipe.category}
+                    </span>
+
+                    <h4 className="font-montserrat font-black text-slate-900 text-base sm:text-lg leading-snug mb-2">
+                      {recipe.name}
+                    </h4>
+
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium mb-4">
+                      {recipe.description}
+                    </p>
+
+                    {/* Secret of Freeze Box */}
+                    <div className="bg-amber-50 border border-amber-200/90 rounded-xl p-3 sm:p-3.5 mb-4 text-xs text-amber-950 font-poppins shadow-2xs">
+                      <div className="flex items-center gap-1.5 font-montserrat font-extrabold text-[11px] sm:text-xs text-amber-900 uppercase tracking-wide mb-1">
+                        <Zap className="w-3.5 h-3.5 text-amber-600 fill-amber-600 shrink-0" />
+                        <span>Segredo do Congelamento:</span>
+                      </div>
+                      <p className="leading-relaxed font-medium text-amber-900">
+                        {recipe.secretTip}
+                      </p>
+                    </div>
+                  </div>
 
                 <div>
                   {/* Macros Strip */}
@@ -173,6 +193,7 @@ export const RecipeExplorer: React.FC<RecipeExplorerProps> = ({ onCtaClick }) =>
                   </div>
                 </div>
               </div>
+            </div>
             ))}
           </div>
         </div>

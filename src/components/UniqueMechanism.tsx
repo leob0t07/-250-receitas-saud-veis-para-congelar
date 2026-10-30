@@ -56,15 +56,15 @@ export const UniqueMechanism: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-montserrat font-bold uppercase tracking-wider mb-3">
             <Calendar className="w-3.5 h-3.5 text-emerald-700" />
-            <span>Como Funciona o Método Por Dentro</span>
+            <span>Módulo Opcional de Praticidade</span>
           </div>
 
           <h2 className="font-montserrat text-2xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-tight uppercase">
-            Tão Fácil Que Parece Trapaça: As 4 Etapas do Seu Método de Organização
+            📅 Quer Deixar Refeições Prontas para a Semana Toda? Conheça o Guia de Organização
           </h2>
 
           <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-slate-600 leading-relaxed font-medium">
-            📅 <strong>Quer Organizar a Semana Toda de Uma Vez?</strong> Conheça o Método "Semana Pronta em 1h30" para deixar o almoço e jantar da semana inteira etiquetados no domingo sem complicação:
+            Se você gosta de praticidade extrema, use nosso método opcional de 1h30 para deixar almoço e jantar etiquetados no freezer. Mas lembre-se: as receitas do acervo são tão rápidas e simples que você também pode fazê-las fresquinhas na hora que quiser!
           </p>
         </div>
 

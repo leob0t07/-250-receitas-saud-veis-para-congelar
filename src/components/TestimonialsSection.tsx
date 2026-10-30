@@ -31,11 +31,11 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onCtaC
             Quem Usa o Acervo <span className="text-emerald-700">Nunca Mais Volta</span> a Perder Horas no Fogão
           </h2>
           <p className="mt-2.5 sm:mt-3 text-xs sm:text-base text-slate-600 font-medium">
-            Fotos reais enviadas por quem colocou as receitas em prática com potes caseiros comuns de plástico ou vidro:
+            Fotos reais tiradas do celular por alunos mostrando seus lanches práticos, wraps, baurus e refeições saudáveis:
           </p>
         </div>
 
-        {/* MOBILE VIEW (Carousel with arrows & dots - 1 card per slide, super clear & aligned) */}
+        {/* MOBILE VIEW (Carousel with arrows & dots - 1 card per slide) */}
         <div className="block lg:hidden">
           <div className="relative">
             {/* Arrow Controls on Mobile */}
@@ -70,50 +70,57 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onCtaC
                   className="bg-white rounded-2xl border-2 border-slate-200 shadow-md overflow-hidden flex flex-col justify-between"
                 >
                   {/* Social Header */}
-                  <div className="p-3.5 border-b border-slate-100 flex items-center gap-3">
-                    <img
-                      src={item.avatarUrl}
-                      alt={item.name}
-                      width={40}
-                      height={40}
-                      className="w-10 h-10 rounded-full object-cover border border-emerald-500 shrink-0"
-                      loading="lazy"
-                      decoding="async"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="text-left">
-                      <h4 className="font-montserrat text-sm font-black text-slate-900 leading-tight">
-                        {item.name}
-                      </h4>
-                      <span className="text-[10px] text-slate-500 font-medium block">
-                        {item.city}, {item.state} · {item.timeAgo}
-                      </span>
+                  <div className="p-3.5 border-b border-slate-100 flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-2.5">
+                      <img
+                        src={item.avatarUrl}
+                        alt={item.name}
+                        width={40}
+                        height={40}
+                        className="w-10 h-10 rounded-full object-cover border-2 border-emerald-500 shrink-0"
+                        loading="lazy"
+                        decoding="async"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="text-left">
+                        <h4 className="font-montserrat text-sm font-black text-slate-900 leading-tight">
+                          {item.name} ({item.age} anos)
+                        </h4>
+                        <span className="text-[10px] text-slate-500 font-medium block">
+                          {item.city}, {item.state} · {item.timeAgo}
+                        </span>
+                      </div>
                     </div>
+                    <span className="text-[10px] font-montserrat font-bold bg-emerald-100 text-emerald-900 px-2 py-0.5 rounded-full shrink-0">
+                      {item.angle}
+                    </span>
                   </div>
 
-                  {/* Body & Homemade Marmita Photo */}
+                  {/* Body & Homemade Food Photo */}
                   <div className="p-4 flex-1 flex flex-col justify-between text-left">
                     <p className="text-xs text-slate-700 leading-relaxed font-medium mb-3">
                       "{item.content}"
                     </p>
 
-                    {item.resultImage && (
-                      <div className="relative rounded-xl overflow-hidden mb-3 border border-slate-200 bg-slate-100 shadow-2xs">
-                        <img
-                          src={item.resultImage}
-                          alt={`Marmitas caseiras de ${item.name}`}
-                          width={600}
-                          height={400}
-                          className="w-full h-52 object-cover"
-                          loading="lazy"
-                          decoding="async"
-                          referrerPolicy="no-referrer"
-                        />
-                        <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 bg-emerald-600 text-white font-montserrat font-black text-[10px] py-1 px-3.5 rounded-full shadow-lg border-2 border-white uppercase tracking-wider flex items-center gap-1 whitespace-nowrap">
-                          <span>{item.badgeText}</span>
-                        </div>
+                    <div className="relative rounded-xl overflow-hidden mb-3 border border-slate-200 bg-slate-100 shadow-2xs">
+                      <img
+                        src={item.resultImage}
+                        alt={item.photoCaption}
+                        width={600}
+                        height={400}
+                        className="w-full h-52 object-cover"
+                        loading="lazy"
+                        decoding="async"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 bg-emerald-600 text-white font-montserrat font-black text-[10px] py-1 px-3.5 rounded-full shadow-lg border-2 border-white uppercase tracking-wider flex items-center gap-1 whitespace-nowrap">
+                        <span>{item.badgeText}</span>
                       </div>
-                    )}
+                    </div>
+
+                    <div className="text-[11px] text-slate-500 italic mb-2">
+                      📷 {item.photoCaption}
+                    </div>
 
                     {/* Footer */}
                     <div className="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-semibold">
@@ -147,33 +154,39 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onCtaC
           </div>
         </div>
 
-        {/* DESKTOP VIEW (Grid of 6 cards in 3 columns) */}
-        <div className="hidden lg:grid grid-cols-3 gap-6">
+        {/* DESKTOP VIEW (2x2 Grid of 4 distinct stories with macro cell-phone photos) */}
+        <div className="hidden lg:grid grid-cols-2 gap-6 max-w-5xl mx-auto">
           {TESTIMONIALS.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-2xl border border-slate-200 shadow-md overflow-hidden flex flex-col justify-between hover:border-emerald-300 transition-all text-left"
+              className="bg-white rounded-2xl border-2 border-slate-200 shadow-md overflow-hidden flex flex-col justify-between hover:border-emerald-400 transition-all text-left"
             >
               {/* Social Card Header */}
-              <div className="p-4 border-b border-slate-100 flex items-center gap-3">
-                <img
-                  src={item.avatarUrl}
-                  alt={item.name}
-                  width={44}
-                  height={44}
-                  className="w-11 h-11 rounded-full object-cover border-2 border-emerald-500 shadow-xs shrink-0"
-                  loading="lazy"
-                  decoding="async"
-                  referrerPolicy="no-referrer"
-                />
-                <div>
-                  <h4 className="font-montserrat text-sm font-black text-slate-900 leading-tight">
-                    {item.name}
-                  </h4>
-                  <span className="text-[11px] text-slate-500 font-medium block">
-                    {item.city}, {item.state} · {item.timeAgo}
-                  </span>
+              <div className="p-4 border-b border-slate-100 flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <img
+                    src={item.avatarUrl}
+                    alt={item.name}
+                    width={44}
+                    height={44}
+                    className="w-11 h-11 rounded-full object-cover border-2 border-emerald-500 shadow-xs shrink-0"
+                    loading="lazy"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div>
+                    <h4 className="font-montserrat text-sm font-black text-slate-900 leading-tight">
+                      {item.name} <span className="text-slate-500 font-normal">({item.age} anos)</span>
+                    </h4>
+                    <span className="text-[11px] text-slate-500 font-medium block">
+                      {item.city}, {item.state} · {item.timeAgo}
+                    </span>
+                  </div>
                 </div>
+
+                <span className="text-[11px] font-montserrat font-bold bg-emerald-100 text-emerald-900 px-3 py-1 rounded-full shrink-0">
+                  {item.angle}
+                </span>
               </div>
 
               {/* Text Content */}
@@ -182,24 +195,26 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onCtaC
                   "{item.content}"
                 </p>
 
-                {/* Homemade Meal Prep Image with Badge */}
-                {item.resultImage && (
-                  <div className="relative rounded-xl overflow-hidden mb-3.5 border border-slate-200 bg-slate-50">
-                    <img
-                      src={item.resultImage}
-                      alt={`Marmitas caseiras de ${item.name}`}
-                      width={600}
-                      height={400}
-                      className="w-full h-52 object-cover"
-                      loading="lazy"
-                      decoding="async"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 bg-emerald-600 text-white font-montserrat font-black text-xs py-1.5 px-4 rounded-full shadow-lg border-2 border-white uppercase tracking-wider flex items-center gap-1 whitespace-nowrap">
-                      <span>{item.badgeText}</span>
-                    </div>
+                {/* Real Homemade Cell-Phone Photo with Badge */}
+                <div className="relative rounded-xl overflow-hidden mb-2.5 border border-slate-200 bg-slate-50">
+                  <img
+                    src={item.resultImage}
+                    alt={item.photoCaption}
+                    width={600}
+                    height={400}
+                    className="w-full h-56 object-cover"
+                    loading="lazy"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 bg-emerald-600 text-white font-montserrat font-black text-xs py-1.5 px-4 rounded-full shadow-lg border-2 border-white uppercase tracking-wider flex items-center gap-1 whitespace-nowrap">
+                    <span>{item.badgeText}</span>
                   </div>
-                )}
+                </div>
+
+                <p className="text-[11px] text-slate-500 italic mb-3">
+                  📷 {item.photoCaption}
+                </p>
 
                 {/* Social Action Bar */}
                 <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-semibold">
